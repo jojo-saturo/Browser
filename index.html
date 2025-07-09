@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+    .font-notoSans {
+    font-family: "Noto Sans", sans-serif !important;
+  }
+</style>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Browser UI</title>
 </head>
-<body class="h-screen bg-gray-900 text-white p-6 justify-items-center">
-    <div>
+<body class="min-h-screen bg-gray-900 text-white p-6 justify-items-center m-auto w-screen">
+    <div class="font-notoSans">
         <!--Header-->
         <div class="bg-gray-600 mb-6 p-2 rounded-lg">
             <h3>Extensions</h3>
         </div>
-        <div class="flex justify-items-center gap-8 mb-10"> 
+        <div class="flex gap-8 mb-10"> 
             <h1>Extensions List</h1> <!--Extensions List-->
             <button class="bg-gray-600 px-3 py-1 text-white rounded-full hover:bg-red-600">All</button>
             <button class="bg-gray-600 px-3 py-1 text-white rounded-full hover:bg-red-600">Active</button>
