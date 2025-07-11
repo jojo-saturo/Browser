@@ -17,26 +17,31 @@
   <title>Browser UI</title>
 </head>
 
-<body class="min-h-screen w-screen p-6 m-auto text-white bg-gray-900 justify-items-center">
+<body
+  class="min-h-screen w-full max-w-full p-6 mx-auto text-white bg-gray-900 sm:max-w-screen sm:justify-items-center ">
   <div class="font-notoSans">
     <!--Header-->
-    <div class="mb-6 p-2 bg-gray-600 rounded-lg">
+    <div class="mb-6 p-2 bg-gray-600 rounded-lg w-full m-auto">
       <h3>Extensions</h3>
     </div>
-    <div class="flex mb-10 gap-8">
-      <h1>Extensions List</h1>
+    <div class="flex sm:flex-row flex-col">
+      <div>
+        <h1 class="font-bold">Extensions List</h1>
+      </div>
       <!--Extensions List-->
-      <button class="px-3 py-1 text-white bg-gray-600 rounded-full hover:bg-red-600">
-        All
-      </button>
-      <button class="px-3 py-1 text-white bg-gray-600 rounded-full hover:bg-red-600">
-        Active
-      </button>
-      <button class="px-3 py-1 text-white bg-gray-600 rounded-full hover:bg-red-600">
-        Inactive
-      </button>
+      <div class="mb-4">
+        <button class="px-3 py-1 text-white bg-gray-600 rounded-full hover:bg-red-600">
+          All
+        </button>
+        <button class="px-3 py-1 text-white bg-gray-600 rounded-full hover:bg-red-600">
+          Active
+        </button>
+        <button class="px-3 py-1 text-white bg-gray-600 rounded-full hover:bg-red-600">
+          Inactive
+        </button>
+      </div>
     </div>
-    <div class="grid grid-cols-3 max-w-4xl w-full mb-12 justify-between items-center gap-2">
+    <div class="grid grid-cols-1 max-w-4xl w-full mb-12 justify-between items-center gap-2 sm:grid-cols-3">
       <!--Main-->
       <div class="bg-zinc-800 rounded-2xl p-6">
         <h1 class="font-bold mb-2">DevLens</h1>
