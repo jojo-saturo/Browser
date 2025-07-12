@@ -6,133 +6,220 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .font-notoSans {
       font-family: "Noto Sans", sans-serif !important;
     }
   </style>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <title>Browser UI</title>
 </head>
 
-<body
-  class="font-notoSans min-h-screen w-full max-w-full p-6 mx-auto text-white bg-gray-900 sm:max-w-screen sm:justify-items-center ">
-  <div>
-    <!--Header-->
-    <div class="mb-6 p-2 bg-gray-600 rounded-lg w-full m-auto">
-      <h3>Extensions</h3>
+<body class="min-h-screen p-6 font-notoSans text-white bg-gray-900">
+  <!-- Header -->
+   <div class="max-w-6xl mx-auto px-4">
+  <div class="w-full mb-6 p-2 bg-gray-600 rounded-lg">
+    <h3>Extensions</h3>
+  </div>
+
+  <!-- Subheader -->
+  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
+    <h1 class="font-bold text-2xl sm:text-base">Extensions List</h1>
+    <div class="flex gap-4 mt-4 sm:mt-0">
+      <button class="px-3 py-1 bg-gray-600 rounded-full hover:bg-red-600">All</button>
+      <button class="px-3 py-1 bg-gray-600 rounded-full hover:bg-red-600">Active</button>
+      <button class="px-3 py-1 bg-gray-600 rounded-full hover:bg-red-600">Inactive</button>
     </div>
-    <div class="flex sm:flex-row flex-col">
+  </div>
+
+  <!-- Grid List -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <!-- Card Component (reusable) -->
+    <!-- Repeat this block for each extension -->
+    <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
       <div>
-        <h1 class="font-bold pl-15 sm:text-base sm:pl-0 text-2xl">Extensions List</h1>
+        <h1 class="mb-2 font-bold text-lg">DevLens</h1>
+        <p class="mb-6 font-light text-sm">Quickly inspect page layouts and visualize element boundaries.</p>
       </div>
-      <!--Extensions List-->
-      <div class="mb-4 gap-4 flex mt-2 sm:mt-0 sm:ml-auto pl-10">
-        <button class="px-3 py-1 text-white bg-gray-600 rounded-full hover:bg-red-600">
-          All
-        </button>
-        <button class="px-3 py-1 text-white bg-gray-600 rounded-full hover:bg-red-600">
-          Active
-        </button>
-        <button class="px-3 py-1 text-white bg-gray-600 rounded-full hover:bg-red-600">
-          Inactive
-        </button>
+      <div class="flex items-center justify-between">
+        <button class="px-3 py-1 bg-gray-600 rounded-full text-sm hover:bg-red-600">Remove</button>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" class="sr-only peer">
+          <div class="w-11 h-6 bg-white peer-checked:bg-red-600 rounded-full transition-colors duration-300"></div>
+          <div class="absolute top-[2px] left-[2px] bg-white border border-gray-300 rounded-full h-5 w-5 transition-all duration-300 peer-checked:translate-x-full peer-checked:border-white"></div>
+        </label>
       </div>
     </div>
-    <div class="grid grid-cols-1 max-w-4xl w-full mb-12 justify-between items-center gap-2 sm:grid-cols-3">
-      <!--Main-->
-      <div class="bg-zinc-800 rounded-2xl p-6">
-        <h1 class="font-bold mb-2">DevLens</h1>
-        <p class="font-light text-sm mb-4">Quick inspect page layout and valuable element boundries</p>
-        <button class="px-3 py-1 text-white bg-gray-600 rounded-full">
-          Remove
-        </button>
+    <!-- Add more cards below -->
+
+    <!-- Example: -->
+    <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
+      <div>
+        <h1 class="mb-2 font-bold text-lg">StyleSpy</h1>
+        <p class="mb-6 font-light text-sm">Instantly analyse and copy CSS from any webpage element.</p>
       </div>
-      <div class="bg-zinc-800 rounded-2xl p-6">
-        <h1 class="font-bold mb-2">StyleSpy</h1>
-        <p class="font-light text-sm mb-4">Instanty analyse and copy css from any webpage element.</p>
-        <button class="px-3 py-1 text-white bg-gray-600 rounded-full">
-          Remove
-        </button>
+      <div class="flex items-center justify-between">
+        <button class="px-3 py-1 bg-gray-600 rounded-full text-sm hover:bg-red-600">Remove</button>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" class="sr-only peer">
+          <div class="w-11 h-6 bg-white peer-checked:bg-red-600 rounded-full transition-colors duration-300"></div>
+          <div class="absolute top-[2px] left-[2px] bg-white border border-gray-300 rounded-full h-5 w-5 transition-all duration-300 peer-checked:translate-x-full peer-checked:border-white"></div>
+        </label>
       </div>
-      <div class="bg-zinc-800 rounded-2xl p-6">
-        <h1 class="font-bold mb-2">SpeedBoost</h1>
-        <p class="font-light text-sm mb-4">optimize browser resources usage to accelerate page loading.</p>
-        <button class="px-3 py-1 text-white bg-gray-600 rounded-full">
-          Remove
-        </button>
+    </div>
+    
+    <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
+      <div>
+        <h1 class="mb-2 font-bold text-lg">SpeedBoost</h1>
+        <p class="mb-6 font-light text-sm">Optimizes browser resources usage to accelerate page loading.</p>
       </div>
-      <div class="bg-zinc-800 rounded-2xl p-6">
-        <h1 class="font-bold mb-2">JSONWizard</h1>
-        <p class="font-light text-sm mb-4">format,validate and prettiers JSON responses in browser.</p>
-        <button class="px-3 py-1 text-white bg-gray-600 rounded-full">
-          Remove
-        </button>
+      <div class="flex items-center justify-between">
+        <button class="px-3 py-1 bg-gray-600 rounded-full text-sm hover:bg-red-600">Remove</button>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" class="sr-only peer">
+          <div class="w-11 h-6 bg-white peer-checked:bg-red-600 rounded-full transition-colors duration-300"></div>
+          <div class="absolute top-[2px] left-[2px] bg-white border border-gray-300 rounded-full h-5 w-5 transition-all duration-300 peer-checked:translate-x-full peer-checked:border-white"></div>
+        </label>
       </div>
-      <div class="bg-zinc-800 rounded-2xl p-6">
-        <h1 class="font-bold mb-2">TabMaster Pro</h1>
-        <p class="font-light text-sm mb-4">Organizes browser tab into groups and session.</p>
-        <button class="px-3 py-1 text-white bg-gray-600 rounded-full">
-          Remove
-        </button>
+    </div>
+
+    <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
+      <div>
+        <h1 class="mb-2 font-bold text-lg">JSONWizard</h1>
+        <p class="mb-6 font-light text-sm">Formarts, validate, and prettifies JSON responses in browsers.</p>
       </div>
-      <div class="bg-zinc-800 rounded-2xl p-6">
-        <h1 class="font-bold mb-2">ViewportBuddy</h1>
-        <p class="font-light text-sm mb-4">Simulate various screen resolution directly within the browser.</p>
-        <button class="px-3 py-1 text-white bg-gray-600 rounded-full">
-          Remove
-        </button>
+      <div class="flex items-center justify-between">
+        <button class="px-3 py-1 bg-gray-600 rounded-full text-sm hover:bg-red-600">Remove</button>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" class="sr-only peer">
+          <div class="w-11 h-6 bg-white peer-checked:bg-red-600 rounded-full transition-colors duration-300"></div>
+          <div class="absolute top-[2px] left-[2px] bg-white border border-gray-300 rounded-full h-5 w-5 transition-all duration-300 peer-checked:translate-x-full peer-checked:border-white"></div>
+        </label>
       </div>
-      <div class="bg-zinc-800 rounded-2xl p-6">
-        <h1 class="font-bold mb-2">Markup Notes</h1>
-        <p class="font-light text-sm mb-4">
-          Enables innovation and rates directly unto webpage for collaborative
-          debugging.
-        </p>
-        <button class="px-3 py-1 text-white bg-gray-600 rounded-full">
-          Remove
-        </button>
+    </div>
+
+    <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
+      <div>
+        <h1 class="mb-2 font-bold text-lg">TabMaster Pro</h1>
+        <p class="mb-6 font-light text-sm">Organizes browser tabs into groups and sessions .</p>
       </div>
-      <div class="bg-zinc-800 rounded-2xl p-6">
-        <h1 class="font-bold mb-2">GridGuides</h1>
-        <p class="font-light text-sm mb-4">Overlay customizable grids and alignment guides on any webpage.</p>
-        <button class="px-3 py-1 text-white bg-gray-600 rounded-full">
-          Remove
-        </button>
+      <div class="flex items-center justify-between">
+        <button class="px-3 py-1 bg-gray-600 rounded-full text-sm hover:bg-red-600">Remove</button>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" class="sr-only peer">
+          <div class="w-11 h-6 bg-white peer-checked:bg-red-600 rounded-full transition-colors duration-300"></div>
+          <div class="absolute top-[2px] left-[2px] bg-white border border-gray-300 rounded-full h-5 w-5 transition-all duration-300 peer-checked:translate-x-full peer-checked:border-white"></div>
+        </label>
       </div>
-      <div class="bg-zinc-800 rounded-2xl p-6">
-        <h1 class="font-bold mb-2">Palette Picker</h1>
-        <p class="font-light text-sm mb-4">Instantly extracts coder palette from any webpage.</p>
-        <button class="px-3 py-1 text-white bg-gray-600 rounded-full">
-          Remove
-        </button>
+    </div>
+
+    <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
+      <div>
+        <h1 class="mb-2 font-bold text-lg">ViewportBuddy</h1>
+        <p class="mb-6 font-light text-sm">Simulates virious screen resolutons directly within the browser.</p>
       </div>
-      <div class="bg-zinc-800 rounded-2xl p-6">
-        <h1>LinkChecker</h1>
-        <p class="font-light text-sm mb-4">Scans and highlight broken links on any pages.</p>
-        <button class="px-3 py-1 text-white bg-gray-600 rounded-full">
-          Remove
-        </button>
+      <div class="flex items-center justify-between">
+        <button class="px-3 py-1 bg-gray-600 rounded-full text-sm hover:bg-red-600">Remove</button>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" class="sr-only peer">
+          <div class="w-11 h-6 bg-white peer-checked:bg-red-600 rounded-full transition-colors duration-300"></div>
+          <div class="absolute top-[2px] left-[2px] bg-white border border-gray-300 rounded-full h-5 w-5 transition-all duration-300 peer-checked:translate-x-full peer-checked:border-white"></div>
+        </label>
       </div>
-      <div class="bg-zinc-800 rounded-2xl p-6">
-        <h1 class="font-bold mb-2">DOM Snapshot</h1>
-        <p class="font-light text-sm mb-4">Capture and export DOM structure quickly.</p>
-        <button class="px-3 py-1 text-white bg-gray-600 rounded-full">
-          Remove
-        </button>
+    </div>
+
+    <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
+      <div>
+        <h1 class="mb-2 font-bold text-lg">Markup Notes</h1>
+        <p class="mb-6 font-light text-sm">Enables annotation and notes directly onto webpages for collaborative debugging.</p>
       </div>
-      <div class="bg-zinc-800 rounded-2xl p-6">
-        <h1 class="font-bold mb-2">ConsolePlus</h1>
-        <p class="font-light text-sm mb-4">Enhanced developer console with advanced flitring and logging.</p>
-        <button class="px-3 py-1 text-white bg-gray-600 rounded-full">
-          Remove
-        </button>
+      <div class="flex items-center justify-between">
+        <button class="px-3 py-1 bg-gray-600 rounded-full text-sm hover:bg-red-600">Remove</button>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" class="sr-only peer">
+          <div class="w-11 h-6 bg-white peer-checked:bg-red-600 rounded-full transition-colors duration-300"></div>
+          <div class="absolute top-[2px] left-[2px] bg-white border border-gray-300 rounded-full h-5 w-5 transition-all duration-300 peer-checked:translate-x-full peer-checked:border-white"></div>
+        </label>
+      </div>
+    </div>
+
+    <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
+      <div>
+        <h1 class="mb-2 font-bold text-lg">GridGuides</h1>
+        <p class="mb-6 font-light text-sm">Overlay customizables grid and alignment guides on any webpage.</p>
+      </div>
+      <div class="flex items-center justify-between">
+        <button class="px-3 py-1 bg-gray-600 rounded-full text-sm hover:bg-red-600">Remove</button>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" class="sr-only peer">
+          <div class="w-11 h-6 bg-white peer-checked:bg-red-600 rounded-full transition-colors duration-300"></div>
+          <div class="absolute top-[2px] left-[2px] bg-white border border-gray-300 rounded-full h-5 w-5 transition-all duration-300 peer-checked:translate-x-full peer-checked:border-white"></div>
+        </label>
+      </div>
+    </div>
+
+    <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
+      <div>
+        <h1 class="mb-2 font-bold text-lg">Palette Picker</h1>
+        <p class="mb-6 font-light text-sm">Instantly extracts color Palettes from any webpage.</p>
+      </div>
+      <div class="flex items-center justify-between">
+        <button class="px-3 py-1 bg-gray-600 rounded-full text-sm hover:bg-red-600">Remove</button>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" class="sr-only peer">
+          <div class="w-11 h-6 bg-white peer-checked:bg-red-600 rounded-full transition-colors duration-300"></div>
+          <div class="absolute top-[2px] left-[2px] bg-white border border-gray-300 rounded-full h-5 w-5 transition-all duration-300 peer-checked:translate-x-full peer-checked:border-white"></div>
+        </label>
+      </div>
+    </div>
+
+    <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
+      <div>
+        <h1 class="mb-2 font-bold text-lg">LinkChecker</h1>
+        <p class="mb-6 font-light text-sm">Scans and highlights broken links on any page.</p>
+      </div>
+      <div class="flex items-center justify-between">
+        <button class="px-3 py-1 bg-gray-600 rounded-full text-sm hover:bg-red-600">Remove</button>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" class="sr-only peer">
+          <div class="w-11 h-6 bg-white peer-checked:bg-red-600 rounded-full transition-colors duration-300"></div>
+          <div class="absolute top-[2px] left-[2px] bg-white border border-gray-300 rounded-full h-5 w-5 transition-all duration-300 peer-checked:translate-x-full peer-checked:border-white"></div>
+        </label>
+      </div>
+    </div>
+
+    <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
+      <div>
+        <h1 class="mb-2 font-bold text-lg">DOM Snapshot</h1>
+        <p class="mb-6 font-light text-sm">Capture and export DOM structures quickly.</p>
+      </div>
+      <div class="flex items-center justify-between">
+        <button class="px-3 py-1 bg-gray-600 rounded-full text-sm hover:bg-red-600">Remove</button>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" class="sr-only peer">
+          <div class="w-11 h-6 bg-white peer-checked:bg-red-600 rounded-full transition-colors duration-300"></div>
+          <div class="absolute top-[2px] left-[2px] bg-white border border-gray-300 rounded-full h-5 w-5 transition-all duration-300 peer-checked:translate-x-full peer-checked:border-white"></div>
+        </label>
+      </div>
+    </div>
+
+    <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
+      <div>
+        <h1 class="mb-2 font-bold text-lg">ConsolePlus</h1>
+        <p class="mb-6 font-light text-sm">Enhanced developer console with advanced filtering and logging.</p>
+      </div>
+      <div class="flex items-center justify-between">
+        <button class="px-3 py-1 bg-gray-600 rounded-full text-sm hover:bg-red-600">Remove</button>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" class="sr-only peer">
+          <div class="w-11 h-6 bg-white peer-checked:bg-red-600 rounded-full transition-colors duration-300"></div>
+          <div class="absolute top-[2px] left-[2px] bg-white border border-gray-300 rounded-full h-5 w-5 transition-all duration-300 peer-checked:translate-x-full peer-checked:border-white"></div>
+        </label>
       </div>
     </div>
   </div>
-  <!--Entire div-->
+  </div>
 </body>
 
 </html>
