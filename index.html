@@ -17,37 +17,37 @@
   <title>Browser UI</title>
 </head>
 
-<body class="min-h-screen p-6 font-notoSans text-white bg-white dark:bg-gray-900">
+<body class="min-h-screen p-6 font-notoSans text-white bg-gradient-to-b from-blue-100 to-teal-50"> <!--dark:bg-gray-600-->
   <!-- Header -->
   <div class="max-w-4xl mx-auto px-4">
-    <div class="w-full mb-6 p-2 bg-white dark:bg-gray-800 rounded-lg flex flex-row sm:items-center justify-between">
-      <h3 class="font-bold text-x1">Extensions</h3>
+    <div class="w-full mb-6 p-2 bg-white bg-white rounded-lg flex flex-row sm:items-center justify-between">
+      <h3 class="font-bold text-x1 text-gray-800">Extensions</h3> <!--dark:text-white-->
       <div>
         <ion-icon name="moon-outline"
-          class="moon bg-gray-700 rounded-s-lg rounded-e-lg px-1 py-1 text-2xl cursor-pointer hidden"></ion-icon>
+          class="moon bg-slate-200 text-slate-800 rounded-s-lg rounded-e-lg px-1 py-1 text-2xl cursor-pointer hidden"></ion-icon>
         <ion-icon name="sunny-outline"
-          class="sun bg-gray-700 rounded-s-lg rounded-e-lg px-1 py-1 text-2xl cursor-pointer"></ion-icon>
+          class="sun dark:bg-gray-700 rounded-s-lg rounded-e-lg px-1 py-1 text-2xl cursor-pointer"></ion-icon>
       </div>
     </div>
 
     <!-- Subheader -->
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
-      <h1 class="font-bold text-2xl text-2xl">Extensions List</h1>
+      <h1 class="font-bold text-2xl text-2xl text-gray-800">Extensions List</h1> <!--dark:text-white-->
       <div class="flex gap-4 mt-4 sm:mt-0">
         <button
-          class="px-3 py-1 bg-gray-700 hove:bg-gray-600 rounded-full font-medium hover:text-gray-800 hover:bg-red-600">All</button>
+          class="px-3 py-1 bg-white text-gray-600 rounded-full hover:text-white font-medium hover:bg-red-600">All</button> <!--dark:text-gray-800 dark:hover:bg-red-600 dark:bg-gray-700-->
         <button
-          class="px-3 py-1 bg-gray-700 hove:bg-gray-600 rounded-full font-medium hover:text-gray-800 hover:bg-red-600">Active</button>
+          class="px-3 py-1 bg-white text-gray-600 rounded-full hover:text-white font-medium hover:bg-red-600">Active</button> <!--dark:text-gray-800 dark:hover:bg-red-600 dark:bg-gray-700-->
         <button
-          class="px-3 py-1 bg-gray-700 hove:bg-gray-600 rounded-full font-medium hover:text-gray-800 hover:bg-red-600">Inactive</button>
+          class="px-3 py-1 bg-white text-gray-600 rounded-full hover:text-white font-medium hover:bg-red-600">Inactive</button> <!--dark:text-gray-800 dark:hover:bg-red-600 dark:bg-gray-700-->
       </div>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-      <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
+      <div class="p-6 bg-white rounded-2xl flex flex-col justify-between"> <!--dark:bg-zinc-800-->
         <div>
-          <h1 class="mb-2 font-bold text-lg">DevLens</h1>
-          <p class="mb-6 font-light text-sm">Quickly inspect page layouts and visualize element boundaries.</p>
+          <h1 class="mb-2 font-bold text-lg text-gray-800">DevLens</h1> <!--dark:text-white-->
+          <p class="mb-6 font-light text-sm text-gray-700">Quickly inspect page layouts and visualize element boundaries.</p>
         </div>
         <div class="flex items-center justify-between">
           <button
@@ -61,28 +61,10 @@
           </label>
         </div>
       </div>
-      <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
+      <div class="p-6 bg-white rounded-2xl flex flex-col justify-between"> <!--dark:bg-zinc-800-->
         <div>
-          <h1 class="mb-2 font-bold text-lg">StyleSpy</h1>
-          <p class="mb-6 font-light text-sm">Instantly analyse and copy CSS from any webpage element.</p>
-        </div>
-        <div class="flex items-center justify-between">
-          <button
-            class="px-3 py-1 bg-zinc-700 rounded-full text-sm font-medium hover:text-gray-800 hover:bg-red-600">Remove</button>
-          <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" class="sr-only peer">
-            <div class="w-11 h-6 bg-gray-600 peer-checked:bg-red-600 rounded-full transition-colors duration-300"></div>
-            <div
-              class="absolute top-[2px] left-[2px] bg-white border border-gray-300 rounded-full h-5 w-5 transition-all duration-300 peer-checked:translate-x-full peer-checked:border-white">
-            </div>
-          </label>
-        </div>
-      </div>
-
-      <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
-        <div>
-          <h1 class="mb-2 font-bold text-lg">SpeedBoost</h1>
-          <p class="mb-6 font-light text-sm">Optimizes browser resources usage to accelerate page loading.</p>
+          <h1 class="mb-2 font-bold text-lg text-gray-800">StyleSpy</h1> <!--dark:text-white-->
+          <p class="mb-6 font-light text-sm text-gray-700">Instantly analyse and copy CSS from any webpage element.</p>
         </div>
         <div class="flex items-center justify-between">
           <button
@@ -97,10 +79,10 @@
         </div>
       </div>
 
-      <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
+      <div class="p-6 bg-white rounded-2xl flex flex-col justify-between"> <!--dark:bg-zinc-800-->
         <div>
-          <h1 class="mb-2 font-bold text-lg">JSONWizard</h1>
-          <p class="mb-6 font-light text-sm">Formarts, validate, and prettifies JSON responses in browsers.</p>
+          <h1 class="mb-2 font-bold text-lg text-gray-800">SpeedBoost</h1> <!--dark:text-white-->
+          <p class="mb-6 font-light text-sm text-gray-700">Optimizes browser resources usage to accelerate page loading.</p>
         </div>
         <div class="flex items-center justify-between">
           <button
@@ -115,10 +97,10 @@
         </div>
       </div>
 
-      <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
+      <div class="p-6 bg-white rounded-2xl flex flex-col justify-between"> <!--dark:bg-zinc-800-->
         <div>
-          <h1 class="mb-2 font-bold text-lg">TabMaster Pro</h1>
-          <p class="mb-6 font-light text-sm">Organizes browser tabs into groups and sessions .</p>
+          <h1 class="mb-2 font-bold text-lg text-gray-800">JSONWizard</h1> <!--dark:text-white-->
+          <p class="mb-6 font-light text-sm text-gray-700">Formarts, validate, and prettifies JSON responses in browsers.</p>
         </div>
         <div class="flex items-center justify-between">
           <button
@@ -133,10 +115,10 @@
         </div>
       </div>
 
-      <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
+      <div class="p-6 bg-white rounded-2xl flex flex-col justify-between"> <!--dark:bg-zinc-800-->
         <div>
-          <h1 class="mb-2 font-bold text-lg">ViewportBuddy</h1>
-          <p class="mb-6 font-light text-sm">Simulates virious screen resolutons directly within the browser.</p>
+          <h1 class="mb-2 font-bold text-lg text-gray-800">TabMaster Pro</h1> <!--dark:text-white-->
+          <p class="mb-6 font-light text-sm text-gray-700">Organizes browser tabs into groups and sessions .</p>
         </div>
         <div class="flex items-center justify-between">
           <button
@@ -151,10 +133,28 @@
         </div>
       </div>
 
-      <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
+      <div class="p-6 bg-white rounded-2xl flex flex-col justify-between"> <!--dark:bg-zinc-800-->
         <div>
-          <h1 class="mb-2 font-bold text-lg">Markup Notes</h1>
-          <p class="mb-6 font-light text-sm">Enables annotation and notes directly onto webpages for collaborative
+          <h1 class="mb-2 font-bold text-lg text-gray-800">ViewportBuddy</h1> <!--dark:text-white-->
+          <p class="mb-6 font-light text-sm text-gray-700">Simulates virious screen resolutons directly within the browser.</p>
+        </div>
+        <div class="flex items-center justify-between">
+          <button
+            class="px-3 py-1 bg-zinc-700 rounded-full text-sm font-medium hover:text-gray-800 hover:bg-red-600">Remove</button>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" class="sr-only peer">
+            <div class="w-11 h-6 bg-gray-600 peer-checked:bg-red-600 rounded-full transition-colors duration-300"></div>
+            <div
+              class="absolute top-[2px] left-[2px] bg-white border border-gray-300 rounded-full h-5 w-5 transition-all duration-300 peer-checked:translate-x-full peer-checked:border-white">
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="p-6 bg-white rounded-2xl flex flex-col justify-between"> <!--dark:bg-zinc-800-->
+        <div>
+          <h1 class="mb-2 font-bold text-lg text-gray-800">Markup Notes</h1> <!--dark:text-white-->
+          <p class="mb-6 font-light text-sm text-gray-700">Enables annotation and notes directly onto webpages for collaborative
             debugging.</p>
         </div>
         <div class="flex items-center justify-between">
@@ -170,10 +170,10 @@
         </div>
       </div>
 
-      <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
+      <div class="p-6 bg-white rounded-2xl flex flex-col justify-between"> <!--dark:bg-zinc-800-->
         <div>
-          <h1 class="mb-2 font-bold text-lg">GridGuides</h1>
-          <p class="mb-6 font-light text-sm">Overlay customizables grid and alignment guides on any webpage.</p>
+          <h1 class="mb-2 font-bold text-lg text-gray-800">GridGuides</h1> <!--dark:text-white-->
+          <p class="mb-6 font-light text-sm text-gray-700">Overlay customizables grid and alignment guides on any webpage.</p>
         </div>
         <div class="flex items-center justify-between">
           <button
@@ -188,10 +188,10 @@
         </div>
       </div>
 
-      <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
+      <div class="p-6 bg-white rounded-2xl flex flex-col justify-between"> <!--dark:bg-zinc-800-->
         <div>
-          <h1 class="mb-2 font-bold text-lg">Palette Picker</h1>
-          <p class="mb-6 font-light text-sm">Instantly extracts color palettes from any webpage.</p>
+          <h1 class="mb-2 font-bold text-lg text-gray-800">Palette Picker</h1> <!--dark:text-white-->
+          <p class="mmb-6 font-light text-sm text-gray-700">Instantly extracts color palettes from any webpage.</p>
         </div>
         <div class="flex items-center justify-between">
           <button
@@ -206,10 +206,10 @@
         </div>
       </div>
 
-      <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
+      <div class="p-6 bg-white rounded-2xl flex flex-col justify-between"> <!--dark:bg-zinc-800-->
         <div>
-          <h1 class="mb-2 font-bold text-lg">LinkChecker</h1>
-          <p class="mb-6 font-light text-sm">Scans and highlights broken links on any page.</p>
+          <h1 class="mb-2 font-bold text-lg text-gray-800">LinkChecker</h1> <!--dark:text-white-->
+          <p class="mb-6 font-light text-sm text-gray-700">Scans and highlights broken links on any page.</p>
         </div>
         <div class="flex items-center justify-between">
           <button
@@ -224,10 +224,10 @@
         </div>
       </div>
 
-      <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
+      <div class="p-6 bg-white rounded-2xl flex flex-col justify-between"> <!--dark:bg-zinc-800-->
         <div>
-          <h1 class="mb-2 font-bold text-lg">DOM Snapshot</h1>
-          <p class="mb-6 font-light text-sm">Capture and export DOM structures quickly.</p>
+          <h1 class="mb-2 font-bold text-lg text-gray-800">DOM Snapshot</h1> <!--dark:text-white-->
+          <p class="mb-6 font-light text-sm text-gray-700">Capture and export DOM structures quickly.</p>
         </div>
         <div class="flex items-center justify-between">
           <button
@@ -242,10 +242,10 @@
         </div>
       </div>
 
-      <div class="p-6 bg-zinc-800 rounded-2xl text-white flex flex-col justify-between">
+      <div class="p-6 bg-white rounded-2xl flex flex-col justify-between"> <!--dark:bg-zinc-800-->
         <div>
-          <h1 class="mb-2 font-bold text-lg">ConsolePlus</h1>
-          <p class="mb-6 font-light text-sm">Enhanced developer console with advanced filtering and logging.</p>
+          <h1 class="mb-2 font-bold text-lg text-gray-800">ConsolePlus</h1> <!--dark:text-white-->
+          <p class="mb-6 font-light text-sm text-gray-700">Enhanced developer console with advanced filtering and logging.</p>
         </div>
         <div class="flex items-center justify-between">
           <button
